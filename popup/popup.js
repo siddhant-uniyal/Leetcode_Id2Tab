@@ -52,15 +52,16 @@ const generateURL = async (problemId) => {
     }
 }   
 
-function reportError(error) {
+const reportError = (error) => {
     console.error(error.message)
-    const errorContentDiv = document.getElementById("error-content-div")
     errorContentDiv.classList.remove("hidden")
     errorContentDiv.textContent = error.message
 }
 
+
 const input = document.getElementById("id-input-box")
 const button = document.getElementById("id-input-button")
+const errorContentDiv = document.querySelector("#error-content-div")
 
 document.addEventListener("DOMContentLoaded", () => {
     input.focus()
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 button.addEventListener("click" , async () => {
 
-    document.getElementById("error-content-div").classList.add("hidden")
+    errorContentDiv.classList.add("hidden")
 
     const problemId = input.value
 
@@ -90,6 +91,7 @@ button.addEventListener("click" , async () => {
         })
     }
 
+    window.close()
 })
 
 
