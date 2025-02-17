@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Leetcode_Id2Tab",
+  "version": "1.0",
+
+  "description": "Opens the Leetcode problem with the specified ID in a new tab",
+
+  "icons": {
+    "48": "icons/icon.svg"
+  },
+
+  "permissions" : [
+    "<all_urls>"
+  ],
+
+  "browser_action" : {
+    "default_icon" : "icons/icon.svg",
+    "default_title" : "Leetcode_Id2Tab",
+    "default_popup" : "popup/popup.html"
+  },
+
+  "commands": {
+  "_execute_browser_action": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+Q"
+    }
+  }
+  }
+}
