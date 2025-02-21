@@ -42,6 +42,10 @@ const generateURL = async (problemId) => {
 
         const problem = questionList.find(question => question["questionFrontendId"] === problemId)
 
+        if(!problem){
+            throw new Error("problem id doesn't exist , please try again")
+        }
+
         const problemSlug = problem["titleSlug"]
 
         return PROBLEM_URL + problemSlug
@@ -91,7 +95,6 @@ button.addEventListener("click" , async () => {
         })
     }
 
-    window.close()
 })
 
 
