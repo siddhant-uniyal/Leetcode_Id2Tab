@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Leetcode_Id2Tab",
-  "version": "2.0",
+  "version": "3.0",
 
   "description": "Opens the Leetcode problem with the specified ID in a new tab",
 
