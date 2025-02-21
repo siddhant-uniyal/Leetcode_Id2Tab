@@ -62,7 +62,6 @@ const reportError = (error) => {
     errorContentDiv.textContent = error.message
 }
 
-
 const input = document.getElementById("id-input-box")
 const button = document.getElementById("id-input-button")
 const errorContentDiv = document.querySelector("#error-content-div")
@@ -93,6 +92,7 @@ button.addEventListener("click" , async () => {
         browser.tabs.create({
             url : url
         })
+        window.close()
     }
 
 })
